@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #5a2a2a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+    margin: 20px;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: #c62828;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Photo Gallery */
+.photo-gallery .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Love Letter */
+.love-letter {
+    background: rgba(255, 235, 238, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Interactive Cards */
+.reasons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.reason-card {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.reason-card .front,
+.reason-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+}
+
+.reason-card .front {
+    background: #c62828;
+    color: white;
+    font-size: 1.1em;
+}
+
+.reason-card .back {
+    background: #ffebee;
+    color: #c62828;
+    transform: rotateY(180deg);
+}
+
+.reason-card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.reason-card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+}
+
+button {
+    background: #c62828;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #b71c1c;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, My Love!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <audio id="backgroundMusic" loop>
+        <source src="Audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <header>
+            <h1>Happy Valentine's Day, <br><span id="name">[My Princess]</span>! 💖</h1>
+            <p>Even though I know this isn't much I hope you like it. Here's a little something to show how much I care.</p>
+        </header>
+
+        <section class="photo-gallery">
+            <h2>Our Memories Together</h2>
+            <div class="gallery">
+                <img src="image 1.jpeg" width="300" height="300" alt="Memory 1">
+                <img src="image 2.jpeg" width="300" height="300" alt="Memory 2">
+                <img src="image 3.jpeg" width="300" height="300" alt="Memory 3">
+                <!-- Add more photos here -->
+            </div>
+        </section>
+
+        <section class="love-letter">
+            <h2>My Love Letter to You</h2>
+            <p>
+                My Dearest Precious,
+                <br>As I write this, my heart feels so full it might burst. You’ve brought so much love, light, and joy into my life, and I can’t thank you enough for being you. Your smile is my favorite sight, your laughter my favorite sound, and your love is the most precious gift I’ve ever known.
+
+                You make me feel seen, loved, and cherished in ways I never thought possible. With you, I’ve found my best friend, my partner, and my greatest love. Every day with you is a blessing, and I’m so grateful to have you by my side.
+                
+                This Valentines Day, I want you to know how much you mean to me. You are my heart, my soul, and my everything. I love you more than words can say, and I can’t wait to create countless more memories with you.
+                
+                Happy Valentines Day, my love.  
+                <br>
+                [Divine] 💌
+            </p>
+        </section>
+
+        <section class="interactive">
+            <h2>Why I Love You</h2>
+            <div class="reasons">
+                <div class="reason-card" onclick="flipCard(this)">
+                    <div class="front">
+                        <p>Click to see why I love you!</p>
+                    </div>
+                    <div class="back">
+                        <p>Your beauty captivates me 😊</p>
+                    </div>
+                </div>
+                <div class="reason-card" onclick="flipCard(this)">
+                    <div class="front">
+                        <p>Click to see why I love you!</p>
+                    </div>
+                    <div class="back">
+                        <p>Your kindness inspires me every day. 💖</p>
+                    </div>
+                </div>
+                <div class="reason-card" onclick="flipCard(this)">
+                    <div class="front">
+                        <p>Click to see why I love you!</p>
+                    </div>
+                    <div class="back">
+                        <p>You're my best friend and my soulmate. 🌟</p>
+                    </div>
+                </div>
+                <!-- Add more cards here -->
+            </div>
+        </section>
+
+        <footer>
+            <button id="musicButton" onclick="toggleMusic()">
+                <i class="fas fa-music"></i> Play Music
+            </button>
+            <p>Made with ❤️ by [Divine]</p>
+        </footer>
+    </div>
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicButton = document.getElementById('musicButton');
+        
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicButton.innerHTML = '<i class="fas fa-music"></i> Pause Music';
+            } else {
+                music.pause();
+                musicButton.innerHTML = '<i class="fas fa-music"></i> Play Music';
+            }
+        }
+        
+        // Flip cards
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+</body>
+</html>
